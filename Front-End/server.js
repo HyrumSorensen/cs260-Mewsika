@@ -4,10 +4,12 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const port = process.env.PORT || 6900
+const {seed} = require('./controller.js')
 
 app.use(express())
 app.use(cors())
 
+//here is the portion with all my files
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './home.html'))
 })
@@ -29,7 +31,12 @@ app.get('/generator', (req, res) => {
 app.get('/aboutme', (req, res) => {
     res.sendFile(path.join(__dirname, '/aboutme.html'))
 })
+app.get('/mysongscss', (req, res) => {
+    res.sendFile(path.join(__dirname, '/mySongs.css'))
+})
 
+//here are the functions dealing with my database
+app.post('/seed', seed)
 
 
 app.listen(port, () => {

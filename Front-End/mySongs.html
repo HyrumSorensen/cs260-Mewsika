@@ -4,9 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mySongs</title>
+    <title>Keyboard</title>
+    <link rel="stylesheet" href="/mysongscss">
+    <link rel="stylesheet" href="/css">
 </head>
 <body>
-    <p>This is my main mySongs page</p>
+    <header>
+        <h1 id="databaseTitle">My Songs Database</h1>
+    </header>
+    <main>
+        <div id='nav-div'>
+            <nav id="nav-bar">
+                    <a class="crumb" href="/">Home</a>
+                    <a class="crumb" href="/keyboard">Keyboard</a>
+                    <a class="crumb" href="/mySongs">My Songs</a>
+                    <a class="crumb" href="/generator">Generator</a>
+                    <a class="crumb" href="/aboutme">About Me</a>
+        
+            </nav>
+        </div>
+    <div class="Add-Song-Box">
+        <h2>Add A Song</h2>
+        <form>
+          <div class="user-box">
+            <input type="text" name="song-title" required="">
+            <label>Song Name</label>
+          </div>
+          <div class="user-box">
+            <input type="text" name="artist-name" required="">
+            <label>Artist</label>
+          </div>
+          <a href="/submitForm">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+          </a>
+        </form>
+      </div>
+      </main>
 </body>
 </html>
