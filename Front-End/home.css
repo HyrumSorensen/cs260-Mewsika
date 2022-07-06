@@ -1,0 +1,45 @@
+* {
+    margin:0
+}
+
+header {
+    display: flex;
+    background-color: rgb(196, 196, 196);
+    height: 14vh;
+    align-items: center;
+    justify-content: center;
+}
+#title{
+    font-size: 60px;
+    color:rgb(0, 118, 173);
+    font-family: Roboto;
+}
+nav {
+    background-color: rgb(235, 142, 142);
+    display: flex;
+    height: 5vh;
+    align-items: center;
+}
+a {
+    color: rgb(255, 235, 17);
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:visited {
+	color: rgb(0, 118, 173);
+}
+#nav-div {
+    display:flex;
+    justify-content: center;
+    background-color: rgb(235, 142, 142);
+    border-top: 2px solid rgb(0, 118, 173);
+    border-bottom: 2px solid rgb(0, 118, 173);
+}
+#nav-bar {
+    diplay: flex;
+    width: 100%;
+    max-width: 900px;
+    justify-content: space-between;
+} 
