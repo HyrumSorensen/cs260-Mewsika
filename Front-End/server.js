@@ -8,6 +8,9 @@ const {seed, createSong} = require('./controller.js')
 
 app.use(express())
 app.use(cors())
+app.use(express.json())
+
+
 
 //here is the portion with all my files
 app.get('/', (req, res) => {

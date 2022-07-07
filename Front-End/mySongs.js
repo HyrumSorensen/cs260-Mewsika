@@ -3,8 +3,6 @@ const songInput = document.querySelector('#name-input');
 const artistInput = document.querySelector('#artist-input')
 
 function handleSubmit(e) {
-    console.log('entered handleSubmit')
-    form.submit();
     e.preventDefault()
 
     if (songInput.value < 1 || artistInput.value < 1) {
@@ -17,8 +15,9 @@ function handleSubmit(e) {
         artistName: artistInput.value,
         favorite: false
     }
-
-    axios.post('https://mewsika.herokuapp.com/songs', body)
+console.log(songInput.value)
+console.log(artistInput.value)
+    axios.post('/songs', body)
     .then(() => {
         songInput.value = ''
         artistInput.value = ''
