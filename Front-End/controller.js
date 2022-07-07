@@ -44,4 +44,13 @@ module.exports  = {
         })
         .catch(err => console.log(err))
     },
+    getSongs: (req,res) => {
+        sequelize.query(`
+            SELECT * FROM songs;
+        `)
+        .then((dbRes) => {
+            res.status(200).send(dbRes[0])
+            })
+            .catch(err => console.log(err))
+    },
 }

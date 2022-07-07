@@ -1,50 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Keyboard</title>
-    <link rel="stylesheet" href="/mysongscss">
-    <link rel="stylesheet" href="/css">
-</head>
-<body>
+    <link rel="stylesheet" href="/mysongscss" />
+  </head>
+  <body>
     <header>
+      <div id="title-div">
         <h1 id="databaseTitle">My Songs Database</h1>
+      </div>
+      <div id="nav-div">
+        <nav id="nav-bar">
+          <a class="crumb" href="/">Home</a>
+          <a class="crumb" href="/keyboard">Keyboard</a>
+          <a class="crumb" href="/mySongs">My Songs</a>
+          <a class="crumb" href="/generator">Generator</a>
+          <a class="crumb" href="/aboutme">About Me</a>
+        </nav>
+      </div>
     </header>
     <main>
-        <div id='nav-div'>
-            <nav id="nav-bar">
-                    <a class="crumb" href="/">Home</a>
-                    <a class="crumb" href="/keyboard">Keyboard</a>
-                    <a class="crumb" href="/mySongs">My Songs</a>
-                    <a class="crumb" href="/generator">Generator</a>
-                    <a class="crumb" href="/aboutme">About Me</a>
-        
-            </nav>
+      <section id="content">
+        <div id="message-div">
+          <aside id="message"></aside>
         </div>
-    <div class="Add-Song-Box">
-        <h2>Add A Song</h2>
-        <form id="song-form">
-          <div class="user-box">
-            <input id='name-input' type="text" name="song-title" required="">
-            <label>Song Name</label>
-          </div>
-          <div class="user-box">
-            <input id='artist-input' type="text" name="artist-name" required="">
-            <label>Artist</label>
-          </div>
-          <a href="#" id="a-tag">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Submit
-          </a>
-        </form>
-      </div>
-      </main>
-      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-      <script src="/mysongsjs"></script>
-</body>
+        <div class="Add-Song-Box">
+          <h2>Add A Song</h2>
+          <form id="song-form">
+            <div class="user-box">
+              <input
+                id="name-input"
+                type="text"
+                name="song-title"
+                required=""
+              />
+              <label>Song Name</label>
+            </div>
+            <div class="user-box">
+              <input
+                id="artist-input"
+                type="text"
+                name="artist-name"
+                required=""
+              />
+              <label>Artist</label>
+            </div>
+            <a href="#" id="a-tag">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Submit
+            </a>
+          </form>
+        </div>
+        <section>
+          <button id="display-button">Display All Songs</button>
+        </section>
+      </section>
+    </main>
+    <footer>
+        
+    </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/mysongsjs"></script>
+  </body>
 </html>

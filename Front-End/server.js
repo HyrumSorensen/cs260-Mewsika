@@ -4,7 +4,7 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const port = process.env.PORT || 6900
-const {seed, createSong} = require('./controller.js')
+const {seed, createSong, getSongs} = require('./controller.js')
 
 app.use(express())
 app.use(cors())
@@ -46,6 +46,8 @@ app.get('/mysongsjs', (req, res) => {
 app.post('/seed', seed)
 
 app.post('/songs', createSong)
+
+app.get('/songs', getSongs)
 
 
 app.listen(port, () => {

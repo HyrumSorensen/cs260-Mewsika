@@ -1,3 +1,7 @@
+* {
+  margin:0
+}
+
 html {
     height: 100%;
   }
@@ -7,20 +11,80 @@ html {
     font-family: sans-serif;
     background: linear-gradient(#ffffff, rgb(235, 142, 142));
   }
-  
+  header {
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+  }
+  #title-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+  }
+
+  nav {
+    background-color: rgb(235, 142, 142);
+    display: flex;
+    height: 5vh;
+    align-items: center;
+}
+#nav-div {
+  display:flex;
+  justify-content: center;
+  background-color: rgb(235, 142, 142);
+  border-top: 2px solid rgb(0, 118, 173);
+  border-bottom: 2px solid rgb(0, 118, 173);
+}
+#nav-bar {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  justify-content: space-between;
+} 
+
+a {
+  color: rgb(0, 118, 173);
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:visited {
+color: rgb(255, 255, 255);
+}
   .Add-Song-Box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
     width: 400px;
     padding: 40px;
-    transform: translate(-50%, -50%);
     background: rgba(0,0,0,.5);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
   }
-  
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+  footer {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background: rgb(235, 142, 142);
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  #content {
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
   .Add-Song-Box h2 {
     margin: 0 0 30px;
     padding: 0;
@@ -170,4 +234,69 @@ html {
     font-size: 60px;
     color: rgb(0, 118, 173);
   }
+
+  .hide {
+    visibility: hidden;
+}
   
+#message {
+  color:rgb(0, 118, 173);
+  font-weight: bold;
+}
+
+#display-button {
+
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  cursor: pointer;
+  color: #FFFFFF;
+  border-radius: 8px;
+  padding: 14px 24px 16px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  transition: transform 200ms,background 200ms;
+
+}
+
+button:hover{
+  transform: translateY(-2px);
+}
+
+.songs-content-div {
+  display: flex;
+  width: 1300px;
+  padding: 40px;
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+  justify-content: space-between;
+}
+.gotSongs {
+  display: flex;
+  flex-direction: column;
+  color:rgb(255, 255, 255);
+  font-size: 25px;
+  font-weight: bold;
+  gap: 25px;
+}
+.delete-buttons {
+
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: rgb(0, 118, 173);
+  border-radius: 50px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  line-height: 26px;
+  width: 200px;
+}

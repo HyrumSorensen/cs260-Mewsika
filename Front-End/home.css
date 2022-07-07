@@ -1,45 +1,58 @@
-* {
-    margin:0
-}
+
 body {
     font-family: sans-serif;
 }
-header {
-    display: flex;
-    height: 14vh;
-    align-items: center;
-    justify-content: center;
-}
-#title{
-    font-size: 60px;
-    color:rgb(0, 118, 173);
-}
-nav {
-    background-color: rgb(235, 142, 142);
-    display: flex;
-    height: 5vh;
-    align-items: center;
-}
-a {
-    color: rgb(0, 118, 173);
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-a:visited {
-	color: rgb(255, 255, 255);
-}
-#nav-div {
+* {
+    margin:0
+  }
+  
+  html {
+      height: 100%;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      height: 20vh;
+    }
+    #title-div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 15vh;
+    }
+  
+    nav {
+      background-color: rgb(235, 142, 142);
+      display: flex;
+      height: 5vh;
+      align-items: center;
+  }
+  #nav-div {
     display:flex;
     justify-content: center;
     background-color: rgb(235, 142, 142);
     border-top: 2px solid rgb(0, 118, 173);
     border-bottom: 2px solid rgb(0, 118, 173);
-}
-#nav-bar {
+  }
+  #nav-bar {
     display: flex;
     width: 100%;
     max-width: 900px;
     justify-content: space-between;
-} 
+  } 
+  
+  a {
+    color: rgb(0, 118, 173);
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  a:visited {
+  color: rgb(255, 255, 255);
+  }
+
+  #Title {
+    font-size: 60px;
+    color: rgb(0, 118, 173);
+  }
