@@ -14,7 +14,11 @@ function addHide(){
 
 function handleSubmit(e) {
     e.preventDefault()
+    document.getElementById('display-button').disabled = false;
 
+    while (document.querySelector('footer').firstChild) {
+        document.querySelector('footer').removeChild(document.querySelector('footer').firstChild);
+    }
     if (songInput.value < 1 || artistInput.value < 1) {
         alert ('You must enter a song and artist name')
         return
@@ -37,6 +41,9 @@ function getSongs() {
     axios.get('/songs')
     .then(res => {
         document.getElementById('display-button').disabled = true;
+        while (document.querySelector('footer').firstChild) {
+            document.querySelector('footer').removeChild(document.querySelector('footer').firstChild);
+        }
         res.data.forEach(song => {
             createSongTag(song['song_id'], song.name, song.artist_name)
         })
@@ -45,7 +52,16 @@ function getSongs() {
     })
 }
 
+function deleteCard(id) {
+    console.log('in delete Card')
+    axios.delete(`/songs/${id}`)
+    .then(() => getSongs())
+    .catch(err => console.log(err))
+}
+
+
 function createSongTag(id, name, artistName) {
+    console.log('this is the id', id)
     const contentDiv = document.createElement('div')
     contentDiv.classList.add('songs-content-div');
     const songDiv = document.createElement('div');
@@ -62,6 +78,7 @@ function createSongTag(id, name, artistName) {
     deleteButton.classList.add('delete-buttons');
     contentDiv.appendChild(songDiv);
     contentDiv.appendChild(deleteButton);
+    // deleteButton.addEventListener('click', deleteCard(id))
     document.querySelector('footer').appendChild(contentDiv);
 }
 
