@@ -4,7 +4,7 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const port = process.env.PORT || 6900
-const {seed} = require('./controller.js')
+const {seed, createSong} = require('./controller.js')
 
 app.use(express())
 app.use(cors())
@@ -34,9 +34,15 @@ app.get('/aboutme', (req, res) => {
 app.get('/mysongscss', (req, res) => {
     res.sendFile(path.join(__dirname, '/mySongs.css'))
 })
+app.get('/mysongsjs', (req, res) => {
+    res.sendFile(path.join(__dirname, '/mySongs.js'))
+})
+
 
 //here are the functions dealing with my database
 app.post('/seed', seed)
+
+app.post('/songs', createSong)
 
 
 app.listen(port, () => {

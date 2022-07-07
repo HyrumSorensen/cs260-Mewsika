@@ -32,5 +32,16 @@ module.exports  = {
             console.log('DB seeded!')
             res.sendStatus(200)
         }).catch(err => console.log('error seeding DB', err))
-    }
+    },
+
+    createSong: (req, res) => {
+        const {name, artistName, favorite} = req.body;
+        sequelize.query(`
+            INSERT INTO songs (name, artist_name, favorite)
+            VALUES ('${name}', '${artistName}', ${favorite})
+        `).then ((dbRes) => {
+            res.status(200).send(dbRes[0])
+        })
+        .catch(err => console.log(err))
+    },
 }

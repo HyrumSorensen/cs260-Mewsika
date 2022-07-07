@@ -25,16 +25,16 @@
         </div>
     <div class="Add-Song-Box">
         <h2>Add A Song</h2>
-        <form>
+        <form id="song-form">
           <div class="user-box">
-            <input type="text" name="song-title" required="">
+            <input id='name-input' type="text" name="song-title" required="">
             <label>Song Name</label>
           </div>
           <div class="user-box">
-            <input type="text" name="artist-name" required="">
+            <input id='artist-input' type="text" name="artist-name" required="">
             <label>Artist</label>
           </div>
-          <a href="/submitForm">
+          <a href="#" id="a-tag">
             <span></span>
             <span></span>
             <span></span>
@@ -44,5 +44,6 @@
         </form>
       </div>
       </main>
+      <script src="/mysongsjs"></script>
 </body>
 </html>
