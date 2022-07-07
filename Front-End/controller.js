@@ -54,7 +54,7 @@ module.exports  = {
             .catch(err => console.log(err))
     },
     deleteSong: (req, res) => {
-        const {id} = req.params;
+        const id = +req.params.id;
         sequelize.query(`
         DELETE FROM songs
         WHERE song_id=${id};

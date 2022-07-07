@@ -52,9 +52,10 @@ function getSongs() {
     })
 }
 
-function deleteCard(id) {
+function deleteCard(event) {
+    const deleteId= event.target.id
     console.log('in delete Card')
-    axios.delete(`/songs/${id}`)
+    axios.delete(`/songs/${deleteId}`)
     .then(() => getSongs())
     .catch(err => console.log(err))
 }
@@ -76,9 +77,10 @@ function createSongTag(id, name, artistName) {
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete Song';
     deleteButton.classList.add('delete-buttons');
+    deleteButton.setAttribute('id', id);
     contentDiv.appendChild(songDiv);
     contentDiv.appendChild(deleteButton);
-    // deleteButton.addEventListener('click', deleteCard(id))
+    deleteButton.addEventListener('click', deleteCard)
     document.querySelector('footer').appendChild(contentDiv);
 }
 
