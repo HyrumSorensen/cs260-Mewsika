@@ -1,6 +1,7 @@
 
 body {
     font-family: sans-serif;
+    background: linear-gradient(#ffffff, rgb(235, 142, 142));
 }
 * {
     margin:0
@@ -55,4 +56,107 @@ body {
   #Title {
     font-size: 60px;
     color: rgb(0, 118, 173);
+  }
+
+
+
+/* piano notes css */
+  
+  .muzieknootjes {
+    display: block;
+    margin: auto;
+    position: relative;
+    width: 50%;
+    min-width: 300px;
+    height: 200px;
+    border: 0px solid #000;
+  }
+  
+  .noot-1,
+  .noot-2,
+  .noot-3,
+  .noot-4 {
+    position: absolute;
+    animation: notes 2s infinite linear;
+    font-size: 35px;
+    opacity: 0;
+  }
+  
+  .noot-1 {
+    top: 60px;
+    left: 0;
+    animation-delay: 0.5s;
+    color: black;
+  }
+  
+  .noot-2 {
+    top: 30px;
+    left: 30%;
+    animation-delay: 1s;
+    color: black;
+  }
+  
+  .noot-3 {
+    top: 90px;
+    left: 60%;
+    animation-delay: 1.5s;
+    color: black;
+  }
+  
+  .noot-4 {
+    top: 40px;
+    left: 90%;
+    animation-delay: 2s;
+    color: black;
+  }
+  
+  @keyframes notes {
+    0% {
+      transform: scale(1) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.5) translate(50%, -50%);
+    }
+    80% {
+      opacity: 0;
+      transform: scale(1.5) translate(100%, -100%);
+    }
+    100% {
+      transform: scale(1.5) translate(100%, -100%);
+      opacity: 0;
+    }
+  }
+  #content{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+  #text-section {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 10vh;
+    align-self: center;
+    border-radius: 25px;
+    border: 2px solid rgb(0, 118, 173);
+    padding: 10px;
+    color: rgb(0, 118, 173);
+  }
+  #notes {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 20vh;
+    margin-top: 100px;
+  }
+  #my-name {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
   }

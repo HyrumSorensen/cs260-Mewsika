@@ -54,10 +54,12 @@ function getSongs() {
 
 function deleteCard(event) {
     const deleteId= event.target.id
-    console.log('in delete Card')
+    if (window.confirm(`You are about to delete this item from the database!
+Do you wish to proceed?`)) {
     axios.delete(`/songs/${deleteId}`)
     .then(() => getSongs())
     .catch(err => console.log(err))
+    }
 }
 
 

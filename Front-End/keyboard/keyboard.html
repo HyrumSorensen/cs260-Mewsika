@@ -1,38 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Keyboard Page</title>
     <link rel="stylesheet" href="/keyboardcss" />
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <div id="title-div">
-          <h1 id="keyboard-title">Virtual Keyboard</h1>
-        </div>
-        <div id="nav-div">
-          <nav id="nav-bar">
-            <a class="crumb" href="/">Home</a>
-            <a class="crumb" href="/keyboard">Keyboard</a>
-            <a class="crumb" href="/mySongs">My Songs</a>
-            <a class="crumb" href="/generator">Generator</a>
-            <a class="crumb" href="/aboutme">About Me</a>
-          </nav>
-        </div>
-      </header>
-      <main>
+      <div id="title-div">
+        <h1 id="keyboard-title">Virtual Keyboard</h1>
+      </div>
+      <div id="nav-div">
+        <nav id="nav-bar">
+          <a class="crumb" href="/">Home</a>
+          <a class="crumb" href="/keyboard">Keyboard</a>
+          <a class="crumb" href="/mySongs">My Songs</a>
+          <a class="crumb" href="/generator">Generator</a>
+          <a class="crumb" href="/aboutme">About Me</a>
+        </nav>
+      </div>
+    </header>
 
-      </main>
-      <footer>
+<!-- Here are my audio tags for the different keys -->
+    <audio id="sounds" loop= "false" volume = "60">
+      <source src="sounds/clap.wav" id="A" type="audio/wav">
+      <source src="sounds/boom.wav" id="S" type="audio/wav">
+      <source src="sounds/hihat.wav" id="D" type="audio/wav">
+      <source src="sounds/kick.wav" id="F" type="audio/wav">
+      <source src="sounds/snare.wav" id="G" type="audio/wav">
+      <source src="sounds/ride.wav" id="H" type="audio/wav">
+      <source src="sounds/tom.wav" id="J" type="audio/wav">
+    </audio> 
+    <main>
+<!-- here is the actual pinano html -->
+<ul class="piano">
+ <li class="key">
+  <span id= 'first-c' class="white-key" data-key="20" data-note="1C"></span>
+  <span id = 'first-c#' class="black-key" data-key="81" data-note="1Cs"></span>
+ </li>
+ <li class="key">
+  <span id = 'first-d' class="white-key" data-key="65" data-note="1D"></span>
+  <span id = 'first-d#' class="black-key" data-key="87" data-note="1Ds"></span>
+ </li>
+ <li class="key">
+  <span id = 'first-e'class="white-key" data-key="83" data-note="1E"></span>
+ </li>
+ <li class="key">
+  <span id='first-f'  class="white-key" data-key="68" data-note="1F"></span>
+  <span id='first-f#' class="black-key" data-key="82" data-note="1Fs"></span>
+ </li>
+ <li class="key">
+  <span id='first-g' class="white-key" data-key="70" data-note="1G"></span>
+  <span id ='first-g#'class="black-key" data-key="84" data-note="1Gs"></span>
+ </li>
+ <li class="key">
+  <span id='first-a' class="white-key" data-key="71" data-note="2A"></span>
+  <span id='first-a#' class="black-key" data-key="89" data-note="2As"></span>
+ </li>
+ <li class="key">
+  <span id='first-b' class="white-key" data-key="72" data-note="2B"></span>
+ </li>
+ <li class="key">
+  <span id='second-c'class="white-key" data-key="74" data-note="2C"></span>
+  <span id='second-c#'class="black-key" data-key="73" data-note="2Cs"></span>
+ </li>
+ <li class="key">
+  <span id='second-d'class="white-key" data-key="75" data-note="2D"></span>
+  <span id='second-d#'class="black-key" data-key="79" data-note="2Ds"></span>
+ </li>
+ <li class="key">
+  <span id='second-e'class="white-key" data-key="76" data-note="2E"></span>
+ </li>
+ <li class="key">
+  <span id='second-f'class="white-key" data-key="186" data-note="2F"></span>
+  <span id='second-f#'class="black-key" data-key="219" data-note="2Fs"></span>
+ </li>
+ <li class="key">
+  <span id='second-g'class="white-key" data-key="222" data-note="2G"></span>
+  <span id='second-g#'class="black-key" data-key="221" data-note="2Gs"></span>
+ </li>
+ <li class="key">
+  <span id='second-a'class="white-key" data-key="220" data-note="3A"></span>
+  <span id='second-a#'class="black-key" data-key="13" data-note="3As"></span>
+ </li>
+ <li class="key">
+  <span id='second-b'class="white-key" data-key="37" data-note="3B"></span>
+ </li>
+</ul>
+<div id="author-div">
+  <p>This was a fun research experiment, but I did not write the code for this piano</p>
+  <p>See my CSS sheet for this page to see the author of this piano</p>
+</div>
+    </main>
 
-      </footer>
-    
-
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="/keyboardjs"></script>
-</body>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/keyboardjs"></script>
+  </body>
 </html>
