@@ -102,3 +102,9 @@ display: flex;
 #bio-div {
   color: white;
 }
+#portfolio-link {
+  font-size: 50px;
+}
+#portfolio-link:hover {
+  color:rgb(0, 118, 173)
+}
