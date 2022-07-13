@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Generator Page</title>
     <link rel="stylesheet" href="/generatorcss" />
-</head>
-<body>
-<header>
-    <div id="title-div">
+  </head>
+  <body>
+    <header>
+      <div id="title-div">
         <h1 id="generator-title">New Song Generator</h1>
       </div>
       <div id="nav-div">
@@ -21,14 +21,27 @@
           <a class="crumb" href="/aboutme">About Me</a>
         </nav>
       </div>
-</header>
-<main>
-
-</main>
-<footer>
-
-</footer>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="/keyboardjs"></script>
-</body>
+    </header>
+    <main>
+      <section>
+        <div id="grey-box">
+        <textarea id="paragraph" type="text" name="artist-name" required=""></textarea>
+       
+        <a href="#" id="a-tag">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Submit here
+        </a>
+    </div>
+      </section>
+    </main>
+    <footer>
+      <h1 id="new-song-title">Your New, Continued Songs</h1>
+    </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/generatorjs"></script>
+    <script src="https://cdnjs.deepai.org/deepai.min.js"></script>
+  </body>
 </html>

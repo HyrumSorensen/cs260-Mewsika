@@ -5,6 +5,7 @@
 
 body {
     font-family: sans-serif;
+    background: linear-gradient(#ffffff, rgb(235, 142, 142));
 }
 
 header {
@@ -52,4 +53,75 @@ color: rgb(255, 255, 255);
 #generator-title {
     font-size: 60px;
     color: rgb(0, 118, 173);
+  }
+
+
+  /* more css */
+
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  #a-tag {
+    color: rgb(235, 142, 142);
+    font-size: 30px;
+    margin-top: 30px;
+  }
+  #a-tag:hover {
+    color: rgb(190, 221, 149);
+  }
+  #paragraph {
+    margin-top: 20px;
+    display: flex;
+    height: 40vh;
+    width: 70vw;
+    align-items: top;
+    justify-content: left;
+    font-size: 12px;
+    color: black;
+    background-color: rgb(193, 233, 250);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+
+  #grey-box {
+      display: flex;
+        width: 1200px;
+        height: 500px;
+        margin: 10px;
+        padding: 20px;
+        background: rgba(0,0,0,.5);
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(0,0,0,.6);
+        border-radius: 10px;
+        
+        align-items: center;
+        flex-direction: column;
+      
+  }
+  footer{
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0;
+      padding:0;
+      font-family: sans-serif;
+      background: rgb(235, 142, 142);
+      flex-direction: column;
+      gap: 40px;
+  }
+  main {
+    height: 80vh;
+  }
+  #new-song-title {
+    color: rgb(0, 118, 173)
+  }
+
+  .ptag {
+    margin: 40px;
   }

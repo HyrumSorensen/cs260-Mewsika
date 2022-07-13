@@ -1,5 +1,7 @@
 require('dotenv').config()
 const Sequelize = require('sequelize')
+const deepai = require('deepai')
+deepai.setApiKey('4823b15d-47eb-46e0-b9c6-2c07f7b67cd1');
 
 const {CONNECTION_STRING} = process.env
 
@@ -63,5 +65,15 @@ module.exports  = {
          res.status(200).send(dbRes[0])
          })
         .catch(err => console.log(err))
-    }
+    },
+    generateText: (req, res) => {
+        const {name} = req.body;
+
+        (async function () {
+            var resp = await deepai.callStandardApi("text-generator", {
+                    text: `${name}`,
+            });
+            res.status(200).send(resp)
+        })()
+    },
 }

@@ -64,7 +64,6 @@ Do you wish to proceed?`)) {
 
 
 function createSongTag(id, name, artistName) {
-    console.log('this is the id', id)
     const contentDiv = document.createElement('div')
     contentDiv.classList.add('songs-content-div');
     const songDiv = document.createElement('div');
